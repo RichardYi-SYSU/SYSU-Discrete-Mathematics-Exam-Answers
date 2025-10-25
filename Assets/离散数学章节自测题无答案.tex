@@ -176,15 +176,15 @@
   \hline 1 & 基础知识 & 17 & 17 & - \\
   \hline 2 & 命题逻辑 & 99 & 100 & 2.99 \\
   \hline 3 & 一阶逻辑 & 100 & 100 & - \\
-  \hline 4 & 证明方法 & 44 & 45 & - \\
+  \hline 4 & 证明方法 & 45 & 45 & - \\
   \hline 5 & 集合 & 61 & 61 & - \\
   \hline 6 & 关系 & 95 & 95 & - \\
   \hline 7 & 函数 & 48 & 48 & - \\
   \hline 8 & 计数与组合 & 114 & 114 & - \\
   \hline 9 & 图与树 & 73 & 73 & - \\
   \hline 10 & 代数系统 & 75 & 76 & 10.67\\
-  \hline 11 & 群 & 17 & 17 & - \\
-  \hline 总计& & 731 & 733 & 2 \\
+  \hline 11 & 环和域 & 17 & 17 & - \\
+  \hline 总计& & 748 & 750 & 2 \\
   \hline
   \end{tabular}
 \end{table}
@@ -5217,7 +5217,7 @@ D.
 
 \section{集合}
 
-\subsection{测验题 5.1}
+\subsection{测验题5.1}
 设$a$是全集U的一个元素,下面哪些命题是正确的？
 
 A. $ a \in\{a\}$
@@ -6293,7 +6293,7 @@ $
 
 \textcolor{white}{答案：D}
 
-\textcolor{white}{解析：正确选项应为BD.  czg说这道题因答案设置错误不应该再出现在学习通中。}
+\textcolor{white}{解析：正确选项应为BD.  zxc说这道题因答案设置错误不应该再出现在学习通中。}
 
 \subsection{测验题6.3}
 
@@ -13107,8 +13107,113 @@ D. 这个置换是偶置换。
 
 \textcolor{white}{答案：AC}
 
+\subsection{补充练习10.4*}
 
-\section{群}
+给出模16加群$(\mathbb{Z}_{16},\oplus_{16})$所有元素的阶，以及它的所有生成元和所有子群。
+
+\textcolor{white}{解答}：（1）模16加群 $\mathbb{Z}_{16}$ 是循环群， 1 是它的生成元，对任意 $0 \leq d<16, d$ 是 1 的 $d$ 次幂，根据元素阶的性质有 $|d|=\frac{16}{(16, d)}$ ，因此有：
+$$
+\begin{array}{lll}
+|0|=1 & |1|=|3|=|5|=|7|=|9|=|11|=|13|=|15|=16 & |2|=|6|=|10|=|14|=8 \\
+|8|=2 & |4|=|12|=4 &
+\end{array}
+$$
+
+（2）由元素的阶可看到，模 16 加群 $\mathbb{Z}_{16}$ 的所有生成元有 $1,3,5,7,9,11,13,15$ 。
+
+（3）根据循环群的性质，模 16 加群 $\mathbb{Z}_{16}$ 的所有子群有：
+$$
+\begin{aligned}
+& \left\langle 1^0\right\rangle=\langle 0\rangle=\{0\} \\
+& \left\langle 1^1\right\rangle=\langle 1\rangle=\mathbb{Z}_{16} \\
+& \left\langle 1^2\right\rangle=\langle 2\rangle=\{0,2,4,6,8,10,12,14\} \\
+& \left\langle 1^4\right\rangle=\langle 4\rangle=\{0,4,8,12\} \\
+& \left\langle 1^8\right\rangle=\langle 8\rangle=\{0,8\}
+\end{aligned}
+$$
+
+\subsection{补充练习10.5*}
+
+给出$U(18)$群的所有元素的阶，它是否是循环群？如果是，它有哪些生成元？它的所有子群有哪些？
+
+\textcolor{white}{解答}：首先有 $U(18)=\{1,5,7,11,13,17\}$ 。
+（1）对于各元素的阶，首先计算各元素的幂，有：
+$$
+\begin{array}{lllllll}
+1^{-1}=1 & 1^1=1 & & & & & \\
+5^{-1}=11 & 5^1=5 & 5^2=7 & 5^3=17 & 5^4=13 & 5^5=11 & 5^6=1 \\
+7^{-1}=13 & 7^1=7 & 7^2=13 & 7^3=1 & & & \\
+11^{-1}=5 & 11^1=11 & 11^2=13 & 11^3=17 & 11^4=7 & 11^5=5 & 11^6=1 \\
+13^{-1}=7 & 13^1=13 & 13^2=7 & 13^3=1 & & & \\
+17^{-1}=17 & 17^1=17 & 17^2=1 & & & &
+\end{array}
+$$
+
+
+因此有：
+$$
+|1|=1 \quad|5|=6 \quad|7|=3 \quad|11|=6 \quad|13|=3 \quad|17|=2
+$$
+
+（2）根据元素的阶得到群 $U(18)$ 是循环群，它的生成元有 5 和 11 。
+
+（3）根据循环群的性质，$U(18)$ 的所有子群有：
+$$
+\begin{aligned}
+& \left\langle 5^0\right\rangle=\langle 1\rangle=\{1\} \\
+& \left\langle 5^1\right\rangle=\langle 5\rangle=U(18) \\
+& \left\langle 5^2\right\rangle=\langle 7\rangle=\{1,7,13\} \\
+& \left\langle 5^3\right\rangle=\langle 17\rangle=\{1,17\}
+\end{aligned}
+$$
+
+\subsection{补充练习10.6*}
+
+利用拉格朗日定理证明：6阶群有且只有一个3阶子群。
+
+\textcolor{white}{证明}： 6 阶群 $G$ 的元素只能是 1 阶、 2 阶、 3 阶和 6 阶，显然不可能是都是 1 阶元，如果都是 2 阶元，则对任意的 $a \in G$ 有 $a^2=e$ ，从而 $a=a^{-1}$ ，即 $G$ 的任意元素的逆都是这个元素自己。从而对任意 $a, b \in G$ ，
+$$
+(a b)(b a)=a(b b) a=a a=e
+$$
+
+也即 $(a b)^{-1}=b a$ ，但每个元素的逆元就是它自己，所以 $a b=b a$ ，也即这时 $G$ 是交换群，从而对于非单位元的两个不同元素 $a, b, H=\{e, a, b, a b\}$ 是 $G$ 的子群，但 6 阶群不可能有 4 阶子群，矛盾！因此6阶群不可能所有元素都是2阶元，也即存在3阶元 $g$ ，或者6阶元 $g$ 。若 $g$ 是3阶元，则 $H=$ $\left\{e, g, g^2\right\}$ 是 $G$ 的3阶子群，若 $g$ 是6阶元，则 $H=\left\{e, g^2, g^4\right\}$ 是 $G$ 的3阶子群。这就证明了6阶群必存在 3 阶子群。
+
+若 6 阶群 $G$ 存在两个不同的 3 阶子群 $H$ 和 $K$ ，那么 $H \cap K$ 也 $G$ 的子群，且由于 $H \cap K$ 也都是 $H$ 和 $K$ 的真子群，因此根据拉格朗日定理，必有 $H \cap K=\{e\}$ ，从而
+$$
+|G| \geq|H K|=\frac{|H| \cdot|K|}{|H \cap K|}=9
+$$
+
+与 $G$ 是 6 阶群矛盾！因此必有 $H=K$ ，即 $G$ 只有 1 个 3 阶子群。 \qed
+
+\subsection{补充练习 10.7*}
+设 $H$ 和 $K$ 都是群 $G$ 的子群，且 $H \subseteq K \subseteq G$ ，若 $H$ 是 $G$ 的正规子群，且商群 $K / H$ 是商群 $G / H$ 的正规子群，证明：$K$ 是 $G$ 的正规子群。
+
+\textcolor{white}{证明}： 对任意 $g \in G, k \in K$ ，由于 $K / H$ 是 $G / H$ 的正规子群，所以 $(g H)(k H)(g H)^{-1} \in K / H$, 也即 $g k g^{-1} H \in K / H$ ，从而 $g k g^{-1} \in K$ ，从而根据正规子群判定定理有 $K$ 是 $G$ 的正规子群。
+
+\textcolor{white}{分析}：商群 $K / H$ 的元素是 $k H, k \in K$ ，商群 $G / H$ 的元素是 $g H, g \in G$ 。商群 $K / H$ 是商群 $G / H$ 的正规子群，意味着对任意 $g \in G, k \in K,(g H)(k H)(g H)^{-1} \in K / H$ ，也即 $g k g^{-1} H \in K / H$ ，从而 $g k g^{-1} \in K$ ，这意味着 $K$ 是 $G$ 的正规子群。
+
+\subsection{补充练习 10.8*}
+
+给出模 12 加群 $\left(\mathbb{Z}_{12}, \oplus_{12}\right)$ 到模8加群 $\left(\mathbb{Z}_8, \oplus_8\right)$ 的所有同态，以及每个同态的同态核。
+
+\textcolor{white}{解答}：模 12 加群到模 8 加群的同态 $\varphi$ 由 $\varphi(1)$ 决定，由于 $\varphi(1)$ 在模 8 加群中的阶必须是 8 和 12 的公因子，因此 $\varphi(1)$ 在模 8 加群的阶必须是 4 的因子，因此 $\varphi(1)$ 只能是模 8 加群的 1 阶元、 2 阶元和 4 阶元，因此 $\varphi(1)$ 的值只能是 $0, 4, 2$ 或 $6$ ，因此模 12 加群到模 8 加群的所有同态有：
+
+\[
+\begin{tabular}{@{}l@{\hspace{3cm}}l@{}}
+$\varphi_1: \forall x \in \mathbb{Z}_{12},\ \varphi_1(x) = 0$ &
+$\operatorname{Ker}(\varphi_1) = \mathbb{Z}_{12}$ \\
+$\varphi_2: \forall x \in \mathbb{Z}_{12},\ \varphi_2(x) = 4 \otimes_8 x$ &
+$\operatorname{Ker}(\varphi_2) = \{0,2,4,6,8,10\} = 2\mathbb{Z}_{12}$ \\
+$\varphi_3: \forall x \in \mathbb{Z}_{12},\ \varphi_3(x) = 2 \otimes_8 x$ &
+$\operatorname{Ker}(\varphi_3) = \{0,4,8\} = 4\mathbb{Z}_{12}$ \\
+$\varphi_4: \forall x \in \mathbb{Z}_{12},\ \varphi_4(x) = 6 \otimes_8 x$ &
+$\operatorname{Ker}(\varphi_4) = \{0,4,8\} = 4\mathbb{Z}_{12}$
+\end{tabular}
+\]
+
+\clearpage
+
+\section{环和域}
 
 \subsection{测验题11.1}
 
@@ -13432,5 +13537,187 @@ D. 有限域 $\mathrm{GF}(1024)$ 有且仅有 4 个子域。
 
 
 \textcolor{white}{答案：CD}
+
+\subsection{补充练习11.6}
+
+证明$\langle 1+2 \mathrm{i}\rangle$ 是高斯整环 $\mathbb{Z}[\mathrm{i}]$ 的极大理想。
+
+\textcolor{white}{证明}： 由于高斯整环是有单位元的交换环，因此有 $\langle 1+2 \mathrm{i}\rangle=\{(1+2 \mathrm{i})(a+b \mathrm{i}) \mid a, b \in \mathbb{Z}\}$ ．注意到，对任意 $x=c+d \mathrm{i} \in \mathbb{Z}[\mathrm{i}]$ ，都存在 $a, b, z \in \mathbb{Z}$ ，且 $0 \leq z<5$ ，使得 $x=(1+2 \mathrm{i})(a+b \mathrm{i})+z$, 这是因为，注意到有：
+$$
+(1+2 i)(d-d i)=3 d+d i=c+d i+(3 d-c)
+$$
+
+设 $c-3 d=5 k+z$ ，这里 $0 \leq z<5$ ，注意到 $5=(1+2 i)(1-2 i)$ ，因此
+$$
+x=c+d \mathrm{i}=(1+2 \mathrm{i})(d-d \mathrm{i})+5 k+z=(1+2 \mathrm{i})((d+k)-(d+2 k) \mathrm{i})+z
+$$
+
+其中 $0 \leq z<5$。
+
+因此，对 $\mathbb{Z}[1]$ 的任意理想 $J$ ，若 $I \subset J$ ，即存在 $x \in J$ ，且 $x \notin I$ ，从而存在 $a, b, z \in \mathbb{Z}$ ，使得 $x=(1+2 i)(a+b i)+z$ ，其中 $0<z<5$ 。注意到对任意 $0<z<5$ ，都存在 $z^{\prime}, k, 0<z^{\prime}<5, k \in \mathbb{Z}$ 使得 $z^{\prime} z=5 k+1$（实际上，$z^{\prime}$ 就是 $z$ 在群 $U(5)$ 的逆元）。令 $y=(1-2 \mathrm{i})(a+b \mathrm{i})+z^{\prime}$ ，则：
+$$
+\begin{aligned}
+x y & =[(1+2 \mathrm{i})(a+b \mathrm{i})+z]\left[(1-2 \mathrm{i})(a+b \mathrm{i})+z^{\prime}\right] \\
+& =5(a+b \mathrm{i})^2+z(1-2 \mathrm{i})(a+b \mathrm{i})+z^{\prime}(1+2 \mathrm{i})(a+b \mathrm{i})+z z^{\prime} \\
+& =5(a+b \mathrm{i})^2+z(1-2 \mathrm{i})(a+b \mathrm{i})+z^{\prime}(1+2 \mathrm{i})(a+b \mathrm{i})+5 k+1
+\end{aligned}
+$$
+
+
+由于 $x=(1+2 \mathrm{i})(a+b \mathrm{i})+z$ ，所以 $z=x-(1+2 \mathrm{i})(a+b \mathrm{i})$ ，所以
+$$
+\begin{aligned}
+z(1-2 \mathrm{i})(a+b \mathrm{i}) & =(x-(1+2 \mathrm{i})(a+b \mathrm{i}))(1-2 \mathrm{i})(a+b \mathrm{i}) \\
+& =x(1-2 \mathrm{i})(a+b \mathrm{i})-(1+2 \mathrm{i})(a+b \mathrm{i})(1-2 \mathrm{i})(a+b \mathrm{i})
+\end{aligned}
+$$
+由于 $x \in J, 1+2 \mathrm{i} \in I \subset J$ ，因此就有 $z(1-2 \mathrm{i})(a+b \mathrm{i}) \in J$ ，而 $5=(1+2 \mathrm{i})(1-2 \mathrm{i}) \in I, 1+2 \mathrm{i} \in I$, $x \in J, x y \in J$ ，从而
+$$
+1=x y-\left[5(a+b \mathrm{i})^2+z(1-2 \mathrm{i})(a+b \mathrm{i})+z^{\prime}(1+2 \mathrm{i})(a+b \mathrm{i})+5 k\right] \in J
+$$
+
+从而 $J=\mathbb{Z}[i]$ ，这就证明了 $\langle 1+2 i\rangle$ 是极大理想。 \qed
+
+\subsection{补充练习11.7}
+
+证明$\langle x^2+x+1\rangle$是$\mathbb{Z}_2$上多项式环$\mathbb{Z}_2[x]$的极大理想。
+
+\textcolor{white}{证明}：容易看到
+$$
+\mathbb{Z}_2[x] /\left\langle x^2+x+1\right\rangle=\{\overline{0}, \overline{1}, \bar{x}, \overline{1+x}\}
+$$
+
+
+而：
+$$
+\overline{1} \cdot \overline{1}=1 \quad \bar{x} \cdot \overline{1+x}=\overline{1}
+$$
+
+
+因此 $\overline{1}$ 的逆元是 $\overline{1}, \bar{x}$ 和 $\overline{1+x}$ 互为逆元，即 $\mathbb{Z}_2[x] /\left\langle x^2+x+1\right\rangle$ 的每个非零元都有逆，从而 $\mathbb{Z}_2[x] /\left\langle x^2+\right.$ $x+1\rangle$ 是域，从而 $\left\langle x^2+x+1\right\rangle$ 是极大理想。 \qed
+
+\subsection{补充练习11.8}
+
+给出有限域 $\mathbb{Z}_3[x] /\left\langle x^2+2 x+2\right\rangle$ 的元素，加法运算表和乘法运算表，非零元素构成的乘法群的生成元，以及它的所有子域。
+
+\textcolor{white}{解答}：首先有：
+$$
+\mathbb{Z}_3[x] /\left\langle x^2+2 x+2\right\rangle=\{\overline{0}, \overline{1}, \overline{2}, \bar{x}, \overline{x+1}, \overline{x+2}, \overline{2 x}, \overline{2 x+1}, \overline{2 x+2}\}
+$$
+
+
+我们有：
+$$
+\begin{aligned}
+& \bar{x}^2=\overline{x^2}=\overline{x+1} \\
+& \bar{x}^3=\overline{x+1} \cdot \bar{x}=\overline{x^2+x}=\overline{2 x+1} \\
+& \bar{x}^4=\overline{2 x+1} \cdot \bar{x}=\overline{2 x^2+x}=\overline{2} \\
+& \bar{x}^5=\overline{2} \cdot \bar{x}=\overline{2 x} \\
+& \bar{x}^6=\overline{2 x} \cdot \bar{x}=\overline{2 x^2}=\overline{2 x+2} \\
+& \bar{x}^7=\overline{2 x+2} \cdot \bar{x}=\overline{2 x^2+2 x}=\overline{x+2} \\
+& \bar{x}^8=\overline{x+2} \cdot \bar{x}=\overline{x^2+2 x}=\overline{1}
+\end{aligned}
+$$
+
+
+因此 $\bar{x}$ 是生成元，在域 $\mathbb{Z}_3[x] /\left\langle x^2+1\right\rangle$ 中记 $\alpha=\bar{x}$ ，则有：
+$$
+G F(9) \cong\left\{0,1, \alpha=\bar{x}, \alpha^2=\overline{x+1}, \alpha^3=\overline{2 x+1}, \alpha^4=\overline{2}, \alpha^5=\overline{2 x}, \alpha^6=\overline{2 x+2}, \alpha^7=\overline{x+2}\right\}
+$$
+
+
+根据循环群的知识，$\alpha^3=\overline{2 x+1}, \alpha^5=\overline{2 x}$ 和 $\alpha^7=\overline{x+2}$ 也是生成元。
+域 $\mathrm{Z}_3 /\left(x^2+2 x+2\right)$ 的加法运算表如下：
+\vspace{0.5cm}
+
+\begin{tabular}{l||l|l|l|l|l|l|l|l|l}
+\hline ＋ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\bar{x}$ & $x+1$ & $\overline{x+2}$ & $\overline{2 x}$ & $\overline{2 x+1}$ & $\overline{2 x+2}$ \\
+\hline $\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\bar{x}$ & $\overline{x+1}$ & $\overline{x+2}$ & $2 x$ & $2 x+1$ & $2 x+2$ \\
+ $\overline{1}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$ & $\overline{x+1}$ & $\overline{x+2}$ & $\bar{x}$ & $2 x+1$ & $2 x+2$ & $\overline{2 x}$ \\
+ $\overline{2}$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$ & $\overline{x+2}$ & $\bar{x}$ & $\overline{x+1}$ & $2 x+2$ & $2 x$ & $\overline{2 x+1}$ \\
+ $\bar{x}$ & $\bar{x}$ & $x+1$ & $\overline{x+2}$ & $2 x$ & $2 x+1$ & $2 x+2$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ \\
+ $\overline{x+1}$ & $x+1$ & $\overline{x+2}$ & $\bar{x}$ & $\overline{2 x+1}$ & $\overline{2 x+2}$ & $\overline{2 x}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$ \\
+ $\overline{x+2}$ & $\overline{x+2}$ & $\bar{x}$ & $\overline{x+1}$ & $\overline{2 x+2}$ & $\overline{2 x}$ & $\overline{2 x+1}$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$ \\
+ $2 x$ & $\overline{2 x}$ & $\overline{2 x+1}$ & $\overline{2 x+2}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\bar{x}$ & $\overline{x+1}$ & $\overline{x+2}$ \\
+ $\overline{2 x+1}$ & $\overline{2 x+1}$ & $\overline{2 x+2}$ & $\overline{2 x}$ & $\overline{1}$ & $\overline{2}$ & $\overline{0}$ & $\overline{x+1}$ & $\overline{x+2}$ & $\bar{x}$ \\
+ $\overline{2 x+2}$ & $\overline{2 x+2}$ & $\overline{2 x}$ & $2 x+1$ & $\overline{2}$ & $\overline{0}$ & $\overline{1}$ & $\overline{x+2}$ & $2 x+0$ & $\overline{x+1}$ \\
+\hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+由 $\alpha=\bar{x}$ 是生成元，容易得到域 $Z_3 /\left\langle x^2+2 x+2\right\rangle$ 的乘法运算表如下：
+\vspace{0.5cm}
+
+\begin{tabular}{l||l|l|l|l|l|l|l|l|l}
+  
+ \hline． & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\bar{x}$ & $\overline{x+1}$ & $\overline{x+2}$ & $\overline{2 x}$ & $\overline{2 x+1}$ & $\overline{2 x+2}$ \\
+ \hline $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ \\
+ $\overline{1}$ & $\overline{0}$ & $\overline{1}$ & $\overline{2}$ & $\bar{x}$ & $\overline{x+1}$ & $\overline{x+2}$ & $\overline{2 x}$ & $2 x+1$ & $2 x+2$ \\
+ $\overline{2}$ & $\overline{0}$ & $\overline{2}$ & $\overline{1}$ & $\overline{2 x}$ & $\overline{2 x+2}$ & $2 x+1$ & $\bar{x}$ & $\overline{x+2}$ & $\overline{x+1}$ \\
+ $\bar{x}$ & $\overline{0}$ & $\bar{x}$ & $\overline{2 x}$ & $\overline{x+1}$ & $2 x+1$ & $\overline{1}$ & $\overline{2 x+2}$ & $\overline{2}$ & $\overline{x+2}$ \\
+ $\overline{x+1}$ & $\overline{0}$ & $\overline{x+1}$ & $2 x+2$ & $2 x+1$ & $\overline{2}$ & $\bar{x}$ & $\overline{x+2}$ & $\overline{2 x}$ & $\overline{1}$ \\
+ $\overline{x+2}$ & 0 & $x+2$ & $2 x+1$ & $\overline{1}$ & $\bar{x}$ & $2 x+2$ & $\overline{2}$ & $\overline{x+1}$ & $2 x$ \\
+ $\overline{2 x}$ & $\overline{0}$ & $\overline{2 x}$ & $\bar{x}$ & $\overline{2 x+2}$ & $\overline{x+2}$ & $\overline{2}$ & $\overline{x+1}$ & $\overline{1}$ & $\overline{2 x+1}$ \\
+ $\overline{2 x+1}$ & 0 & $\overline{2 x+1}$ & $\overline{x+2}$ & $\overline{2}$ & $\overline{2 x}$ & $\overline{x+1}$ & $\overline{1}$ & $\overline{2 x+2}$ & $\bar{x}$ \\
+ $2 x+2$ & $\overline{0}$ & $2 x+2$ & $\overline{x+1}$ & $\overline{x+2}$ & $\overline{1}$ & $2 x$ & $2 x+1$ & $\bar{x}$ & $\overline{2}$ \\
+\hline
+\end{tabular}
+\vspace{0.5cm}
+
+实际上，上面乘法运算表也可列成下面的形式，就可以更容易看出它们的运算规律：
+\vspace{0.5cm}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.5}
+\begin{tabular}{c||c|c|c|c|c|c|c|c|c}
+\hline$\cdot$ & $\overline{0}$ & $\alpha^0$ & $\alpha^4$ & $\alpha^1$ & $\alpha^2$ & $\alpha^7$ & $\alpha^5$ & $\alpha^3$ & $\alpha^6$ \\
+\hline$\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ & $\overline{0}$ \\
+$\alpha^0$ & $\overline{0}$ & $\alpha^0$ & $\alpha^4$ & $\alpha^1$ & $\alpha^2$ & $\alpha^7$ & $\alpha^5$ & $\alpha^3$ & $\alpha^6$ \\
+$\alpha^4$ & $\overline{0}$ & $\alpha^4$ & $\alpha^0$ & $\alpha^5$ & $\alpha^6$ & $\alpha^3$ & $\alpha^1$ & $\alpha^7$ & $\alpha^2$ \\
+$\alpha^1$ & $\overline{0}$ & $\alpha^1$ & $\alpha^5$ & $\alpha^2$ & $\alpha^3$ & $\alpha^0$ & $\alpha^6$ & $\alpha^4$ & $\alpha^7$ \\
+$\alpha^2$ & $\overline{0}$ & $\alpha^2$ & $\alpha^6$ & $\alpha^3$ & $\alpha^4$ & $\alpha^1$ & $\alpha^7$ & $\alpha^5$ & $\alpha^0$ \\
+$\alpha^7$ & $\overline{0}$ & $\alpha^7$ & $\alpha^3$ & $\alpha^0$ & $\alpha^1$ & $\alpha^6$ & $\alpha^4$ & $\alpha^2$ & $\alpha^5$ \\
+$\alpha^5$ & $\overline{0}$ & $\alpha^5$ & $\alpha^1$ & $\alpha^6$ & $\alpha^7$ & $\alpha^4$ & $\alpha^2$ & $\alpha^0$ & $\alpha^3$ \\
+$\alpha^3$ & $\overline{0}$ & $\alpha^3$ & $\alpha^7$ & $\alpha^4$ & $\alpha^5$ & $\alpha^2$ & $\alpha^0$ & $\alpha^6$ & $\alpha^1$ \\
+$\alpha^6$ & $\overline{0}$ & $\alpha^6$ & $\alpha^2$ & $\alpha^7$ & $\alpha^0$ & $\alpha^5$ & $\alpha^3$ & $\alpha^1$ & $\alpha^4$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{0.5cm}
+
+由于 $\mathrm{Z}_3 /\left\langle x^2+2 x+2\right\rangle \cong \mathrm{GF}\left(3^2\right)$ ，因此它的子域只有两个。在非零元素构成的乘法群中， $|\bar{x}|=|\alpha|=3^2-1$ ，因此它的两个子域分别是：
+$$
+\{\overline{0}\} \cup\langle\alpha\rangle=\mathbb{Z}_3 /\left\langle x^2+2 x+2\right\rangle \quad \text { 和 } \quad\{\overline{0}\} \cup\left\langle\alpha^4\right\rangle=\{\overline{0}, \overline{1}, \overline{2}\} \cong \mathbb{Z}_3
+$$
+
+\subsection{补充练习11.9}
+
+有限域 $\mathbb{Z}_2[x] /\left\langle x^2+x+1\right\rangle$ 的加法群与 $\mathbb{Z}_2 \oplus \mathbb{Z}_2$ 同构，请写出它们之间的一个同构射。
+
+\textcolor{white}{解答}：注意到， $\mathbb{Z}_2[x] /\left\langle x^2+x+1\right\rangle=\{\overline{0}, \overline{1}, \bar{x}, \overline{x+1}\}$ ，且其加法运算表如下：
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.5}
+\begin{tabular}{c||c|c|c|c}
+\hline+ & $\overline{0}$ & $\overline{1}$ & $\bar{x}$ & $\overline{x+1}$ \\
+\hline$\overline{0}$ & $\overline{0}$ & $\overline{1}$ & $\bar{x}$ & $\overline{x+1}$ \\
+$\overline{1}$ & $\overline{1}$ & $\overline{0}$ & $\overline{x+1}$ & $\bar{x}$ \\
+$\bar{x}$ & $\bar{x}$ & $\overline{x+1}$ & $\overline{0}$ & $\overline{1}$ \\
+$\overline{x+1}$ & $\overline{x+1}$ & $\bar{x}$ & $\overline{1}$ & $\overline{0}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{0.5cm}
+
+所以可看到 $\mathbb{Z}_2[x] /\left\langle x^2+x+1\right\rangle$ 的加法群同构于克莱因四元群 $K=\{e, a, b, a b\}$ ，这里 $e$ 是单位元，$a, b$ 是任选两个元素，第三个元素是这两个元素的乘积，每个元素的逆元都是它自己，即两个不同元素相乘等于第三个元素，而两个相同元素相乘等于单位元 $e $ 。$\mathbb{Z}_2 \oplus \mathbb{Z}_2$ 也同构于克莱因四元群，因此 $Z_2[x] /\left\langle x^2+x+1\right\rangle$ 到 $Z_2 \oplus \mathbb{Z}_2$ 的同构只要是双函数且保持单位元即可，例如，可令 $\varphi: \mathbb{Z}_2[x] /\left\langle x^2+x+1\right\rangle \rightarrow \mathbb{Z}_2 \oplus \mathbb{Z}_2$ 为：
+$$
+\varphi(\overline{0})=\langle 0,0\rangle, \quad \varphi(\overline{1})=\langle 0,1\rangle, \quad \varphi(\bar{x})=\langle 1,0\rangle, \quad \varphi(\overline{x+1})=\langle 1,1\rangle
+$$
 
 \end{document}
